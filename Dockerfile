@@ -11,8 +11,6 @@ ENV PHP_INI_CONF_DIR='/etc/php/7.2/mods-available' \
     PHP_EXTENSIONS_DISABLE="" \
     PHP_FPM_LISTEN=9000
 
-RUN sed -i 's/ports.ubuntu.com/mirror.tuna.tsinghua.edu.cn/g' /etc/apt/sources.list
-
 RUN set -eux \
     && apt-get update && apt-get upgrade -y \
     && LC_ALL=C.UTF-8 add-apt-repository ppa:ondrej/php \
